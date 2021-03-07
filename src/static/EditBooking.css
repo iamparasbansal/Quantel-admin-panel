@@ -1,0 +1,30 @@
+.Edit-Booking-container{
+    justify-content: center;
+    padding-top: 10vh;
+    padding-left: 20vh;
+    padding-right: 30vh;
+}
+
+.Edit-Booking-Button{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #2b7a78;
+    cursor: pointer;
+}
+
+.Add-Booking-Button:hover{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 0;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #3aafa9;
+    cursor: pointer;
+}
