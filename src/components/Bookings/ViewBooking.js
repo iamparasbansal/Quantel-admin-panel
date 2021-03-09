@@ -1,14 +1,17 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
-import '../../static/ViewBookings.css'
+import {useHistory} from 'react-router-dom';
+import '../../static/ViewBookings.css';
+
 const ViewBooking=()=>{
 
+    var history= useHistory();
     const {id}= useParams();
 
     const[Booking, setBooking]= useState({
         name:"",
-        username:"",
+        consultant:"",
         email:"",
         phone:"",
         website:""
@@ -23,6 +26,11 @@ const ViewBooking=()=>{
         setBooking(result.data);
     }
 
+    const onClick=async e=>{
+        e.preventDefault();
+        history.push("/Bookings");
+    }
+
     return(
         <div className="View-Booking-container">
             <div className="py-4">
@@ -30,8 +38,8 @@ const ViewBooking=()=>{
                 <table className="table table-bordered table-striped border shadow">
                     <tbody >
                         <tr>
-                            <td><b>Username</b></td>
-                            <td>{Booking.username}</td>
+                            <td><b>Consultant</b></td>
+                            <td>{Booking.consultant}</td>
                         </tr>
                         <tr>
                             <td><b>Phone Number</b></td>
@@ -47,6 +55,9 @@ const ViewBooking=()=>{
                         </tr>       
                     </tbody>
                 </table>
+                <div className="View-Booking-Button-divison">
+                    <button className="View-Booking-Button" onClick={e=>onClick(e)}>Go Back</button>
+                </div>
             </div>
         </div>
     );

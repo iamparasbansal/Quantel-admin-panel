@@ -7,13 +7,13 @@ const AddBooking= ()=>{
     var history= useHistory();
     const[Booking, setBooking]= useState({
         name:"",
-        username:"",
+        consultant:"",
         email:"",
         phone:"",
         website:""
     });
 
-    const {name, username, email, phone, website}=Booking;
+    const {name, consultant, email, phone, website}=Booking;
     const onInputChange=e=>{
         setBooking({...Booking, [e.target.name]: e.target.value})
     }
@@ -24,7 +24,7 @@ const AddBooking= ()=>{
     }
     return(
     <div className="Add-Booking-Container">
-        <div className="booking-card">
+        <div className="Add-booking-card">
             <h2 className="text-center mb-4">Add A Booking</h2>
             <form onSubmit={e=>onSubmit(e)}>
                 <div className="form-group">
@@ -43,10 +43,10 @@ const AddBooking= ()=>{
                     <input 
                         type="text" 
                         className="form-control form-control-lg"
-                        placeholder="Enter Username"
-                        name="username"
-                        id="input-username"
-                        value={username}
+                        placeholder="Enter Consultant"
+                        name="consultant"
+                        id="input-consultant"
+                        value={consultant}
                         onChange={e=>onInputChange(e)}
                     />
                 </div>

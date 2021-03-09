@@ -8,13 +8,13 @@ const EditBooking= ()=>{
     const {id}= useParams();
     const[Booking, setBooking]= useState({
         name:"",
-        username:"",
+        consultant:"",
         email:"",
         phone:"",
         website:""
     });
 
-    const {name, username, email, phone, website}=Booking;
+    const {name, consultant, email, phone, website}=Booking;
     const onInputChange=e=>{
         setBooking({...Booking, [e.target.name]: e.target.value})
     }
@@ -35,9 +35,11 @@ const EditBooking= ()=>{
     }
     return(
     <div className="Edit-Booking-container">
+    <div className="Edit-booking-card">
         <h2 className="text-center mb-4">Edit Booking</h2>
         <form onSubmit={e=>onSubmit(e)}>
             <div className="form-group">
+            Name
                 <input 
                     type="text" 
                     className="form-control form-control-lg"
@@ -50,18 +52,20 @@ const EditBooking= ()=>{
             </div>
 
             <div className="form-group">
+            Consultant
                 <input 
                     type="text" 
                     className="form-control form-control-lg"
                     placeholder="Enter Username"
-                    name="username"
-                    id="input-username"
-                    value={username}
+                    name="consultant"
+                    id="input-consultant"
+                    value={consultant}
                     onChange={e=>onInputChange(e)}
                 />
             </div>
 
             <div className="form-group">
+            Phone Number
                 <input 
                     type="text" 
                     className="form-control form-control-lg"
@@ -74,6 +78,7 @@ const EditBooking= ()=>{
             </div>
 
             <div className="form-group">
+            Email Address
                 <input 
                     type="text" 
                     className="form-control form-control-lg"
@@ -86,6 +91,7 @@ const EditBooking= ()=>{
             </div>
 
             <div className="form-group">
+            Website Name
                 <input 
                     type="text" 
                     className="form-control form-control-lg"
@@ -99,6 +105,7 @@ const EditBooking= ()=>{
 
             <button className="Edit-Booking-Button">Update Changes</button>
         </form>
+    </div>
     </div>
     );
 };

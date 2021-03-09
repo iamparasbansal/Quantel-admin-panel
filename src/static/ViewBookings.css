@@ -4,3 +4,31 @@
     padding-top: 5vh;
     padding-left: 20vh;
 }
+
+.View-Booking-Button-divison{
+    text-align: right;
+}
+.View-Booking-Button{
+    border: none;
+    outline: none;
+    width:15%;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #2b7a78;
+    cursor: pointer;
+}
+
+.View-Booking-Button:hover{
+    border: none;
+    outline: none;
+    width: 15%;
+    padding: 15px 0;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #3aafa9;
+    cursor: pointer;
+    justify-self: right;
+}

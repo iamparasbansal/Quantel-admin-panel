@@ -6,3 +6,16 @@
     padding-right: 10vh;
     padding-left: 5vh;
 }
+
+.thead-search-filter ::placeholder{
+    color: #888888;
+}
+
+.thead-search-filter span{
+    margin-left: 15px;
+}
+
+.thead-search-filter .search-field-input{
+    width:30vh;
+    height: 4vh;
+}

@@ -5,6 +5,14 @@
     padding-right: 30vh;
 }
 
+.Edit-booking-card{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 25vh;
+    padding-right: 25vh;
+    box-shadow: 0 0.5rem 1rem #888888;
+}
+
 .Edit-Booking-Button{
     border: none;
     outline: none;
@@ -17,7 +25,7 @@
     cursor: pointer;
 }
 
-.Add-Booking-Button:hover{
+.Edit-Booking-Button:hover{
     border: none;
     outline: none;
     width: 100%;
