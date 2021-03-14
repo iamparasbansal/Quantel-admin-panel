@@ -1,25 +1,25 @@
 .navbar {
-    background-color: #17252A;
-    height: 8vh;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+  background-color: #17252a;
+  height: 8vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
-.Navbar-Brand-title{
-    color: aliceblue;
-    display: block;
-    margin-left: 1.5vh;
+.Navbar-Brand-title {
+  color: aliceblue;
+  display: block;
+  margin-left: 1.5vh;
 }
-  
+
 .menu-bars {
-    margin-top: 0;
-    margin-left: 1rem;
-    font-size: 2rem;
-    background: none;
+  margin-top: 0;
+  margin-left: 1rem;
+  font-size: 2rem;
+  background: none;
 }
 
-.menu-bars svg{
-    margin-bottom: 0.8rem;
-    color: white;
+.menu-bars svg {
+  margin-bottom: 0.8rem;
+  color: white;
 }

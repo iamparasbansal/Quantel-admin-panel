@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../static/login.css';
+import '../static/login.css';
 
 const Login =(props)=>{
 

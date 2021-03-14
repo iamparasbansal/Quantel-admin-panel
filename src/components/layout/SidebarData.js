@@ -1,43 +1,77 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
+import HomeIcon from "@material-ui/icons/Home";
+import ReceiptIcon from "@material-ui/icons/Receipt";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
+import SettingsIcon from "@material-ui/icons/Settings";
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import PersonIcon from '@material-ui/icons/Person';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
-export const SidebarData = [
+export const items = [
 
-    {
-        title: 'Home',
-        path: '/',
-        icon: <AiIcons.AiFillHome />,
-        cName: 'side-panel-text'
-    },
+{ 
+    name: "home", 
+    label: "Home", 
+    Icon: HomeIcon, 
+    path: "/"
+},
+  "divider",
+{
+    name: "booking",
+    label: "Bookings",
+    Icon: ReceiptIcon,
+    path:"/Bookings"
+},
+ "divider",
+{
+    name: "add booking",
+    label: "Add Booking",
+    Icon: AddCircleOutlineIcon,
+    path:"/Bookings/add"
+},
+"divider",
+{
+    name: "consultant",
+    label: "Consultant",
+    Icon: PersonIcon,
+    path:"/consultants"
+},
+"divider",
+{
+    name: "add consultant",
+    label: "Add Consultant",
+    Icon: PersonAddIcon,
+    path:"/consultants/add"
+},
 
-    {
-        title: 'Bookings',
-        path: '/Bookings',
-        icon: <IoIcons.IoIosPaper />,
-        cName: 'side-panel-text'
-    },
-
-    {
-        title: 'Add Booking',
-        path: '/Bookings/add',
-        icon: <FaIcons.FaUserPlus/>,
-        cName: 'side-panel-text'
-    },
-
-    {
-        title: 'About',
-        path: '/about',
-        icon: <IoIcons.IoMdHelpCircle />,
-        cName: 'side-panel-text'
-    },
-
-    {
-        title: 'Contact Us',
-        path: '/contact',
-        icon: <FaIcons.FaEnvelopeOpenText />,
-        cName: 'side-panel-text'
-    },
-    
+  "divider",
+  {
+    name: "settings",
+    label: "Settings",
+    Icon: SettingsIcon,
+    items: [
+      { name: "profile", label: "Profile" },
+      { name: "insurance", label: "Insurance"},
+      "divider",
+      {
+        name: "notifications",
+        label: "Notifications",
+        Icon: NotificationsIcon,
+        items: [
+          { name: "email", label: "Email"},
+          {
+            name: "desktop",
+            label: "Desktop",
+            Icon: DesktopWindowsIcon,
+            items: [
+              { name: "schedule", label: "Schedule" },
+              { name: "frequency", label: "Frequency" }
+            ]
+          },
+          { name: "sms", label: "SMS" }
+        ]
+      }
+    ]
+  }
 ];

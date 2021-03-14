@@ -1,78 +1,107 @@
-.side-panel-menu {
-    background-color: #17252A;
-    width: 28vh;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    top: 8vh;
-    left: 0;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.side-panel-items {
-    width: 100%;
-    padding-inline-start: 0px;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-.side-panel-text {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 8px 0px 8px 16px;
-    list-style: none;
-    height: 60px;
-}
-  
-.side-panel-text a {
-    text-decoration: none;
-    color: #f5f5f5;
-    font-size: 18px;
-    width: 95%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    border-radius: 4px;
-}
-  
-.side-panel-text a:hover {
-    background-color: #3aafa9;
+.sidebar {
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  background-color: #17252a;
+  max-width: 240px;
+  height: 100vh;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.side-panel-items {
-    width: 100%;
-    padding-inline-start: 0px;
-}
-  
-.side-panel-menu span{
-    margin-left: 16px;
+.sidebar-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.Sidebar-logout-button{
-    margin-left: 2vh;
-    margin-top: 2vh;
-    margin-right: 2vh;
-    border: none;
-    outline: none;
-    width: 24vh;
-    padding: 15px 0;
-    color: #fff;
-    font-size: 16px;
-    letter-spacing: 1px;
-    background: #3aafa9;
-    cursor: pointer;
+.sidebar-item-content {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
-.Sidebar-logout-button:hover{
-    margin-left: 2vh;
-    margin-top: 2vh;
-    margin-right: 2vh;
-    border: none;
-    outline: none;
-    width: 24vh;
-    padding: 15px 0;
-    color: #fff;
-    font-size: 16px;
-    letter-spacing: 1px;
-    background: #2b7a78;
-    cursor: pointer;
+.sidebar-item-icon {
+  margin-right: 6px;
+  color: white;
+  font-size: 2rem !important;
+}
+
+.sidebar-item-text {
+  width: 100%;
+  color: white;
+  padding: 8px 0px 8px 16px;
+  font-size: 1.2rem !important;
+}
+
+.sidebar-item-text:hover {
+  width: 100%;
+  padding: 8px 0px 8px 16px;
+  color: white;
+  font-size: 1.3rem !important;
+}
+
+.sidebar-item-expand-arrow {
+  font-size: 1.2rem !important;
+  color: white;
+}
+
+.sidebar-item-expand-arrow-expanded {
+  color: white;
+  font-weight: bold;
+}
+
+.sidebar-button {
+  padding-top: 2rem;
+  justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.Sidebar-logout-button {
+  margin-left: 2vh;
+  margin-top: 2vh;
+  margin-right: 2vh;
+  border: none;
+  outline: none;
+  width: 24vh;
+  padding: 1rem;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background:#2b7a78;
+  cursor: pointer;
+}
+
+.Sidebar-logout-button:hover {
+  margin-left: 2vh;
+  margin-top: 2vh;
+  margin-right: 2vh;
+  border: none;
+  outline: none;
+  width: 24vh;
+  padding: 1rem;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #3aafa9;
+  cursor: pointer;
 }

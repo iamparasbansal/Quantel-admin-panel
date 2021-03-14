@@ -1,0 +1,41 @@
+.Add-Consultant-Container{
+    width: 100%;
+    justify-items: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 15vh;
+    padding-right: 15vh;
+}
+
+.Add-Consultant-card{
+    margin: 7vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 25vh;
+    padding-right: 25vh;
+    box-shadow: 0 0.5rem 1rem #888888;
+}
+
+.Add-Consultant-Button{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #2b7a78;
+    cursor: pointer;
+}
+
+.Add-Consultant-Button:hover{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 0;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #3aafa9;
+    cursor: pointer;
+}
