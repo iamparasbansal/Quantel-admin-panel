@@ -1,10 +1,21 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
+import Autocomplete from '../AutoComplete';
 import '../../static/AddBooking.css';
 
 const AddBooking= ()=>{
     var history= useHistory();
+
+    window.addEventListener('keydown',function(e){
+        if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){
+            if(e.target.nodeName=='BUTTON'){
+                e.preventDefault();
+                return false;
+            }
+        }
+    },true);
+
     const[allConsultants, setAllConsultants]=useState([]);
     const[Booking, setBooking]= useState({
         name:"",
@@ -14,12 +25,13 @@ const AddBooking= ()=>{
         website:""
     });
 
+    
     useEffect(()=>{
         loadConsultants();
     }, []);
 
     const loadConsultants= async()=>{
-        const result =await axios.get("http://localhost:3001/Bookings");
+        const result =await axios.get("http://localhost:3001/Consultants");
         setAllConsultants(result.data.reverse());
     };
 
@@ -51,14 +63,11 @@ const AddBooking= ()=>{
                     />
                 </div>
                 <div className="form-group">
-                    <input 
-                        type="text" 
-                        className="form-control form-control-lg"
-                        placeholder="Enter Consultant"
-                        name="consultant"
-                        id="input-consultant"
-                        value={consultant}
-                        onChange={e=>onInputChange(e)}
+                    <Autocomplete
+                        AutoPlaceholder="Enter Consultant"
+                        defaultValue={consultant}
+                        data={allConsultants}
+                        onSelect={consultantSelected => setBooking({...Booking, consultant:consultantSelected.name})}
                     />
                 </div>      
                 <div className="form-group">
@@ -102,5 +111,4 @@ const AddBooking= ()=>{
     </div>
     );
 };
-
 export default AddBooking;

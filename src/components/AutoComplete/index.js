@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import AutoCompleteItem from "./AutoCompleteItem";
 
-const AutoComplete = ({ data, onSelect, defaultValue}) => {
+const AutoComplete = ({ data, onSelect, defaultValue, AutoPlaceholder}) => {
 
     const [isVisbile, setVisiblity] = useState(false);
     const [search, setSearch] = useState("");
@@ -95,6 +95,7 @@ const AutoComplete = ({ data, onSelect, defaultValue}) => {
             <input
                 type="text"
                 name="search"
+                placeholder={AutoPlaceholder}
                 className="form-control form-control-lg"
                 autoComplete="off"
                 value={defaultValueChange}

@@ -77,6 +77,7 @@ const EditBooking= ()=>{
             <div className="form-group">
                 Consultant
                 <Autocomplete
+                    AutoPlaceholder="Enter Consultant"
                     defaultValue={consultant}
                     data={consultantsArr}
                     onSelect={consultantSelected => setBooking({...Booking, consultant:consultantSelected.name})}

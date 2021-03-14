@@ -52,6 +52,22 @@
       "phone": "9540343",
       "website": "www.paras.com",
       "id": 10
+    },
+    {
+      "name": "Hermoine Granger",
+      "consultant": "Chelsey Dietrich",
+      "email": "djfn@jkdf",
+      "phone": "9865445",
+      "website": "ken.com",
+      "id": 11
+    },
+    {
+      "name": "Paras Bansal",
+      "consultant": "Glenna Reichert",
+      "email": "iamparasbansal@gmail.com",
+      "phone": "+919306519917",
+      "website": "www.ParasBansal.com",
+      "id": 12
     }
   ],
   "Consultants": [
