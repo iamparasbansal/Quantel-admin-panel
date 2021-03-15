@@ -9,9 +9,8 @@ const AddBooking= ()=>{
 
     window.addEventListener('keydown',function(e){
         if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){
-            if(e.target.nodeName=='BUTTON'){
-                e.preventDefault();
-                return false;
+            if(e.target.nodeName=='INPUT'&&e.target.type=='text'){
+                e.preventDefault();return false;
             }
         }
     },true);

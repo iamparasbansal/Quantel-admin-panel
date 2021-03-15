@@ -1,14 +1,11 @@
 .Add-Booking-Container{
-    width: 100%;
-    justify-items: center;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    padding-left: 15vh;
-    padding-right: 15vh;
+    justify-content: center;
+    padding-top: 10vh;
+    padding-left: 20vh;
+    padding-right: 30vh;
 }
 
 .Add-booking-card{
-    margin: 7vh;
     padding-top: 5vh;
     padding-bottom: 5vh;
     padding-left: 25vh;

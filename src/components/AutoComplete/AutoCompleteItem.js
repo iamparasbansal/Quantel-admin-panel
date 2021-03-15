@@ -2,6 +2,8 @@ import React from "react";
 
 const AutoCompleteItem = ({
     name,
+    email,
+    phone,
     onSelectItem,
     isHighlighted
 }) => {
@@ -17,6 +19,8 @@ const AutoCompleteItem = ({
                     <p className="mb-0 font-weight-bold line-height-1">
                         {name}
                     </p>
+                    <p className="mb-0 badge" style={{backgroundColor: '#17252a', color:'white'}}>{email}</p>
+                    <p className="mb-0 ml-2 badge" style={{backgroundColor: '#2b7a78', color:'white'}}>{phone}</p>
                 </div>
             </div>
         </li>

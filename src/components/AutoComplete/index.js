@@ -86,6 +86,7 @@ const AutoComplete = ({ data, onSelect, defaultValue, AutoPlaceholder}) => {
     };
 
     function handleValueChange(e){
+        showSuggestion();
         setDefaultValueChange(e.target.value);
         setSearch(e.target.value);
     }

@@ -40,7 +40,7 @@ const StyledTableCell = withStyles((theme) => ({
 const StyledTableRow = withStyles((theme) => ({
   root: {
     '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.action.hover,
+      backgroundColor: "rgb(214, 214, 214)",
     },
   },
 }))(TableRow);
@@ -310,7 +310,10 @@ export default function EnhancedBookingTable() {
                         </Link>
                         <Tooltip title="Delete">
                           <IconButton aria-label="delete">
-                            <DeleteIcon onClick={()=>deleteUser(Booking.id)}/>
+                            <DeleteIcon onClick={() => { 
+                              if (window.confirm('Are you sure you wish to delete this Booking?')) 
+                                    deleteUser(Booking.id) 
+                            }}/>
                           </IconButton>
                         </Tooltip>
                         </StyledTableCell>
